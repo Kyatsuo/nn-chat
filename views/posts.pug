@@ -11,7 +11,7 @@ html(lang="ja")
     link(rel="stylesheet" href="style.css")
     title NNチャット
   body.container.overflow-scroll(data-bs-theme=currentTheme)
-    nav.navbar.fixed-top.bg-primary
+    nav.navbar.fixed-top.bg-success
       div.container-fluid
         h1.text-light.navbar-brand.mx-auto NNチャット
           i.bi-chat-dots-fill.ms-2
@@ -24,7 +24,7 @@ html(lang="ja")
               a.dropdown-item(href="/changeTheme") #{changeThemeText}
               a.dropdown-item(href="/logout") ログアウト
     each post in posts
-      - const cardClass = (user === post.postedBy ? 'card my-3 border-primary' : 'card my-3')
+      - const cardClass = (user === post.postedBy ? 'card my-3 border-success' : 'card my-3')
       div(class=cardClass)
         div.card-body
           div.d-flex.justify-content-between
@@ -47,7 +47,7 @@ html(lang="ja")
           textarea(name="content" rows="4" placeholder="Ctrl(Command)+Enterで送信できます").form-control
           input(type="hidden" name="oneTimeToken" value=oneTimeToken)
         div.col-12
-          button(type="submit").btn.btn-primary.float-end
+          button(type="submit").btn.btn-success.float-end
             i.bi-send
  
 

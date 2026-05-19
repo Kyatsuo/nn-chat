@@ -11,3 +11,7 @@ p.card-text {
   white-space: pre-wrap;
   word-break: break-all;
 }
+
+body {
+    background-color: rgb(235, 255, 241);
+}
