@@ -12,7 +12,24 @@ p.card-text {
   word-break: break-all;
 }
 
-body {
-    background-color: rgb(235, 255, 241);
-    background-color: rgb(233, 255, 240);
+[data-bs-theme="light"] {
+    --custom-bg: #e8f5e9;
+    --custom-card-bg: #ffffff;
+    --custom-text: #1b5e20;
+}
+
+[data-bs-theme="dark"] {
+    --custom-bg: #1b4332;
+    --custom-card-bg: #2d6a4f;
+    --custom-text: #d8f3dc;
+}
+
+body.custom-theme {
+    background-color: var(--custom-bg) !important;
+    color: var(--custom-text) !important;
+}
+
+body.custom-theme .card {
+    background-color: var(--custom-card-bg) !important;
+    color: var(--custom-text) !important;
 }
